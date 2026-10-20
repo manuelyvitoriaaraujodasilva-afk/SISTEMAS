@@ -7,7 +7,7 @@ while True:
     print ("2 - Fazer login")
     print ("3 - Sair")
 
-    opcao = int(input(" Escolha uma opcao : "))
+    opcao = input(" Escolha uma opcao : ")
     #funcionalidades
 #se o usuario digitar 1, vai ser exibido
 # a acao abaixo:
