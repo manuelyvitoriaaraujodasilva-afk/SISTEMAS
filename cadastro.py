@@ -1,4 +1,4 @@
-# Variaveis para cadastro
+# dados do usuario
 nome = ""
 idade = ""
 usuario = ""
@@ -46,6 +46,7 @@ while True:
     #Processamento de usuario e senha
         if login_usuario == usuario  and login_senha == senha :
             while True :
+                
                 print("\nLogin realizado com sucesso! \n")
                 print("Bem vindo,", nome)
                 print("\n=====Area do Usuario=====\n")
@@ -53,7 +54,6 @@ while True:
                 print("2 - Voltar para o menu anterior")
 
                 usuario_opcao = input("\nEscolha uma das opcoes do menu acima: \n")
-
                 if (usuario_opcao == "1"):
                     print("\n=====================")
                     print("===Dados cadastrados===")
