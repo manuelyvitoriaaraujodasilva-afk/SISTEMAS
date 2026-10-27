@@ -3,12 +3,18 @@ nome = ""
 idade = ""
 usuario = ""
 senha = ""
-# Apenas a tela de visualizacao
 
 #variaveis para login
 login_usuario = "" 
 login_senha = ""
+
+#Variaveis de controle
+controle_cadastro = ""
+
+#Apenas tela de visualizacao
 while True:
+    controle_cadastro = "2"
+    #alterando o controle cadastro para poder cadastrar quantas vezes quiser,alteracao acima.
     print ("===================")
     print ("sistema de cadrastro")
     print ("===================")
@@ -21,18 +27,22 @@ while True:
     #funcionalidades
 #se o usuario digitar 1, vai ser exibido
 # a acao abaixo:
-# Variaveis
-    # Se digitar 2, abre a tela de login
     if (opcao == "1") :
-        print("========================")
-        print("====Tela de Cadastro====")
-        print("========================")
-        nome = input("Digite o seu nome: ")
-        idade = input("Digite sua idade: ")
-        usuario = input("Digite o  seu usuario: ")
-        senha = input("Digite sua senha: ")
-        print("\n Cadastro realizado! \n")
-        
+         while controle_cadastro != "1":
+            print("========================")
+            print("====Tela de Cadastro====")
+            print("========================")
+            nome = input("Digite o seu nome: ")
+            idade = input("Digite sua idade: ")
+            usuario = input("Digite o  seu usuario: ")
+            senha = input("Digite sua senha: ")
+
+            controle_cadastro = input("\n Voce deseja valtar para a tela anterior ?\n 1)-Voltar para o menu anterior;\nDigite qualquer tecla para refazer o cadastro;\n")
+
+            if(controle_cadastro == "1"):
+             print("\n Cadastro realizado! \n")
+            else:
+                print("valor digitado invalido, faca o cadastro novamente")
     #se digitar 2, abre a tela do login
     elif (opcao == "2") :
         print("========================")
@@ -49,7 +59,10 @@ while True:
                 print("\n=====Area do Usuario=====\n")
                 print("1 - ver os dados cadastrados")
                 print("2 - Voltar para o menu anterior")
+                print("3 - Alterar senha")
+
                 usuario_opcao = input("\nEscolha uma das opcoes do menu acima: \n")
+
                 if (usuario_opcao == "1"):
                     print("\n=====================")
                     print("===Dados cadastrados===")
@@ -63,6 +76,9 @@ while True:
                 elif(usuario_opcao == "2"): 
                     print("\nVoce esta voltando para o menu anterior") 
                     break 
+                elif(usuario_opcao == "3"):
+                    senha = input ("\nDigite a nova senha: ")
+                    
                 else:
                     print("\nOpcao digitada invalida, use os numeros do Menu!")
 
