@@ -33,20 +33,17 @@ while True:
         senha = input("Digite sua senha: ")
         print("\n Cadastro realizado! \n")
         
-
-        login_usuario = input("Digite o usuario cadastrado") 
     #se digitar 2, abre a tela do login
     elif (opcao == "2") :
         print("========================")
         print("====Tela de login====")
         print("========================")
-        login_senha = input("Digite o usuario: ")
+        login_usuario = input("Digite o usuario: ")
         login_senha = input("Digite a senha:")
 
     #Processamento de usuario e senha
         if login_usuario == usuario  and login_senha == senha :
             while True :
-
                 print("\nLogin realizado com sucesso! \n")
                 print("Bem vindo,", nome)
                 print("\n=====Area do Usuario=====\n")
