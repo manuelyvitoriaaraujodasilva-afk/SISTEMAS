@@ -1,4 +1,4 @@
-# Variaveis
+# Variaveis para cadastro
 nome = ""
 idade = ""
 usuario = ""
@@ -45,15 +45,38 @@ while True:
 
     #Processamento de usuario e senha
         if login_usuario == usuario  and login_senha == senha :
-           print("\nLogin realizado com sucesso! \n")
-           print("Bem vindo,", nome)
+            while True :
+                print("\nLogin realizado com sucesso! \n")
+                print("Bem vindo,", nome)
+                print("\n=====Area do Usuario=====\n")
+                print("1 - ver os dados cadastrados")
+                print("2 - Voltar para o menu anterior")
+
+                usuario_opcao = input("\nEscolha uma das opcoes do menu acima: \n")
+
+                if (usuario_opcao == "1"):
+                    print("\n=====================")
+                    print("===Dados cadastrados===")
+                    print("=====================\n")
+                    #Mostrar dados do usuario:
+                    print("Nome de cadastro:", nome)
+                    print("Idade do usuario:",idade)
+                    print("Nome do usuario:",usuario)
+                    print("Senha do usuario:",senha)
+
+                elif(usuario_opcao == "2"): 
+                    print("\nVoce esta voltando para o menu anterior") 
+                    break 
+                else:
+                    print("\nOpcao digitada invalida, use os numeros do Menu!")
+
            #se nao estiver correto entra nocaso abaixo
         else:
-           print("Usuario ou senha incorretos")
+           print("\nUsuario ou senha incorretos\n")
 
     #se digitar 3, o codigo sai da execucao
     elif (opcao == "3") :
-        print("Voce esta saindo do cadastro, ate mais!")
+        print("\nVoce esta saindo do cadastro, ate mais!\n")
         break
     #Se nao for 1,2 ou 3, mostrar erro e repetir o codigo
     else :
